@@ -1,0 +1,14 @@
+#app {
+  width: 300px;
+  height: 600px;
+  background: #ccc;
+}
+
+@supports (background: paint(id)) {
+  #app {
+    border-radius: 0;
+    -webkit-mask-image: paint(corner-shape);
+    --corner-radius: 40px;
+    --corner-shape: scoop;
+  }
+}
